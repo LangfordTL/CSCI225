@@ -13,11 +13,11 @@
                     <h2>Feedback Form</h2>
                     <form action="feedback.php"></form>
                     <p>
-                        <label> First Name: <input type="text" name="fname" placeholder="anonymous"></label>
+                        <label> *First Name: <input type="text" name="fname" placeholder="anonymous" required></label>
                         <br>
-                        <label> Last Name: <input type="text" name="lname" placeholder="anonymous"></label>
+                        <label> *Last Name: <input type="text" name="lname" placeholder="anonymous" required></label>
                         <br>
-                        <label> Email: <input type="email" name="mail" placeholder="xxx@domain.com" required></label>
+                        <label> *Email: <input type="email" name="mail" placeholder="xxx@domain.com" required></label>
                         <br>
                         <label> Phone number (optional) <input type="text" name="phonenumber" placeholder="xxx-xxx-xxxx"></label>
                         <br>
@@ -53,9 +53,7 @@
                         <br>
                         Leave any comments for me 
                         <br>
-                        <textarea name="comment" id="comment" cols="10" rows="10">
-                        Enter your comments
-                        </textarea>
+                        <textarea name="comment" id="comment" cols="10" rows="10" placeholder="Enter your comments"></textarea>
 
                         <br>
                         <br>
