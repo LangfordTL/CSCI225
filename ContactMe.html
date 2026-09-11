@@ -6,23 +6,28 @@
             <main>
                 <section>
                     <h2>Youtube Video</h2>
-                    <a href=""> Youtube Video</a>
+                    <a href="https://www.youtube.com/watch?v=hh6LN8uwytE"> Youtube Video</a>
                 </section>
                 
                 <section>
                     <h2>Feedback Form</h2>
+                    <form action="feedback.php"></form>
                     <p>
-                        <label> First Name<input type="text" name="fname" placeholder="anonymous"></label>
-                        <p></p>
-                        <label> Last Name<input type="text" name="lname" placeholder="anonymous"></label>
-                        <p></p>
-                        <label> Email<input type="email" name="mail" placeholder="xxx@domain.com" required></label>
-                        <p></p>
+                        <label> First Name: <input type="text" name="fname" placeholder="anonymous"></label>
+                        <br>
+                        <label> Last Name: <input type="text" name="lname" placeholder="anonymous"></label>
+                        <br>
+                        <label> Email: <input type="email" name="mail" placeholder="xxx@domain.com" required></label>
+                        <br>
+                        <label> Phone number (optional) <input type="text" name="phonenumber" placeholder="xxx-xxx-xxxx"></label>
+                        <br>
 
+                        <br>
                         Would you recommend this webite?
                         <label> Yes <input type="radio" name="y" value="Yes"></label>
                         <label> No <input type="radio" name="n" value="No"></label>
 
+                        <br>
                         What is your favorite website?
                         <select name="favwebsite" size="1" multiple>
                             <option value="g"> Google</option>
@@ -33,11 +38,30 @@
                             <option value="i"> Instagram</option>
                             <option value="t"> TikTok</option>
                         </select>
+                        <br>
+                        Pick your favorite color
+                        <input type="color" name="sColor">
+                        <br>
+                        When is your birthday
+				        <input type="date" name="checkin">
+                        <br>
 
+                        <br>
                         Scale this website from 1-10
                         <input type="range" name="rate" id="rating" step="1" min="1" max="10">
-                    </p>
+                        <br>
+                        <br>
+                        Leave any comments for me 
+                        <br>
+                        <textarea name="comment" id="comment" cols="10" rows="10">
+                        Enter your comments
+                        </textarea>
 
+                        <br>
+                        <br>
+                        <input type="submit" value="submit">
+                    </p>
+                    </form>
                 </section>
 
             </main>
