@@ -12,62 +12,65 @@
                 
                 <section>
                     <h2>Feedback Form</h2>
-                    <form action="feedback.php"></form>
-                    <p>
-                        <label> *First Name: <input type="text" name="fname" placeholder="anonymous" required></label>
-                        <br>
-                        <label> *Last Name: <input type="text" name="lname" placeholder="anonymous" required></label>
-                        <br>
-                        <label> *Email: <input type="email" name="mail" placeholder="xxx@domain.com" required></label>
-                        <br>
-                        <label> Phone number (optional) <input type="text" name="phonenumber" placeholder="xxx-xxx-xxxx"></label>
-                        <br>
+                        <form action="feedback.php" method="post">
+                            <p>
+                                <label> *First Name: <input type="text" name="fname" placeholder="anonymous" required></label>
+                                <br>
+                                <label> *Last Name: <input type="text" name="lname" placeholder="anonymous" required></label>
+                                <br>
+                                <label> *Email: <input type="email" name="mail" placeholder="xxx@domain.com" required></label>
+                                <br>
+                                <label> Phone number (optional) <input type="text" name="phonenumber" placeholder="xxx-xxx-xxxx"></label>
+                                <br>
 
-                        <br>
-                        Would you recommend this webite?
-                        <label> 
-                            <input type="radio" name="choice" value="Yes">
-                            Yes
-                        </label>
-                        <label> 
-                            <input type="radio" name="choice" value="No">
-                            No
-                        </label>
+                                <br>
+                                Would you recommend this webite?
+                                <label> 
+                                    <input type="radio" name="choice" value="Yes">
+                                    Yes
+                                </label>
+                                <label> 
+                                    <input type="radio" name="choice" value="No">
+                                    No
+                                </label>
 
-                        <br>
-                        What is your favorite website?
-                        <select name="favwebsite" size="3" multiple>
-                            <option value="g"> Google</option>
-                            <option value="d"> Discord</option>
-                            <option value="x"> Twitter</option>
-                            <option value="y"> YouTube</option>
-                            <option value="f"> Facebook</option>
-                            <option value="i"> Instagram</option>
-                            <option value="t"> TikTok</option>
-                        </select>
-                        <br>
-                        Pick your favorite color
-                        <input type="color" name="sColor">
-                        <br>
-                        When is your birthday
-				        <input type="date" name="checkin">
-                        <br>
+                                <br>
+                                What is your favorite website?
+                                <select name="favwebsite" size="3" multiple>
+                                    <option value="g"> Google</option>
+                                    <option value="d"> Discord</option>
+                                    <option value="x"> Twitter</option>
+                                    <option value="y"> YouTube</option>
+                                    <option value="f"> Facebook</option>
+                                    <option value="i"> Instagram</option>
+                                    <option value="t"> TikTok</option>
+                                </select>
+                                <br>
+                                Pick your favorite color
+                                    <input type="color" name="sColor">
+                                <br>
+                                When is your birthday
+				                    <input type="date" name="checkin">
+                                <br>
 
-                        <br>
-                        Scale this website from 1-10
-                        <input type="range" name="rate" id="rating" step="1" min="1" max="10">
-                        <br>
-                        <br>
-                        Leave any comments for me 
-                        <br>
-                        <textarea name="comment" id="comment" cols="10" rows="10" placeholder="Enter your comments"></textarea>
+                                <br>
+                                Scale this website from 1-10
+                                    <input type="range" name="rate" id="rating" step="1" min="1" max="10">
+                                <br>
+                                <br>
+                                Leave any comments for me 
+                                <br>
+                                    <textarea name="comment" id="comment" cols="10" rows="10" placeholder="Enter your comments"></textarea>
 
-                        <br>
-                        <br>
-                        <input type="submit" value="submit">
-                        <br>
-                        <a href="index.html"> Back </a>
-                    </p>
+                                <br>
+                                <br>
+                                <input type="submit" value="submit">
+                                <br 
+                            </p>
+                        </form>
+
+                    <br>
+                    <a href="index.html"> Back </a>
                 </section>
 
             </main>
