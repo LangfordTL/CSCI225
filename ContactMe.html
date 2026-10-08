@@ -2,41 +2,80 @@
 <html>
     <head>
         <title> CSCI225 Contact Me file</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     </head>
         <body>
-            <main>
-                <section>
+
+        
+
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <strong>Welcome!</strong> Please leave any and all feedback thank you.
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        
+        <main class="row">
+            <div class="container-fluid">
+                <nav class="col nav bg-dark text-white">
+                    <ol class="nav fw-bold">
+                        <li class="nav-iem"><a class="nav-link link-info" href="https://www.usca.edu/">USC Aiken page</a></li>
+                        <li class="nav-iem"><a class="nav-link link-info" href="index.html#intro"> Introduction</a></li>
+                        <li class="nav-iem"><a class="nav-link link-info" href="index.html#Assignments">Assignment Tab</a></li>
+                        <li class="nav-iem"><a class="nav-link link-info" href="index.html#portfolio"> Portfolio</a></li>
+                        <li class="nav-iem"><a class="nav-link link-info" href="index.html#schedule">Schedule</a></li>
+                    </ol>
+                </div>
+            </nav>
+                <nav aria-label="breadcrumb"> <strong>Contact Information</strong>
+                <ul class="fw-bold breadcrumb">
+                    <li class="breadcrumb-item"><a href="mailto:LangfordTLogan@gmail.com">Send email to Logan Langford</a></li>
+                    <li class="breadcrumb-item"><a href="https://www.instagram.com/warmbloodedk1ll_/">Follow me on Instagram</a></li>
+                    <li class="breadcrumb-item"><a href="https://www.tiktok.com/@warmbloodedk1ll?is_from_webapp=1&sender_device=pc">Follow me on TikTok</a></li>
+                    <li class="breadcrumb-item"><a href="ContactMe.html"> Contact Me</a></li>
+                </ul>
+                </nav>
+            
+                <section class="col border border-dark mx-auto p-2 mt-5" style="width: 200px;">
                     <h2>Youtube Video</h2>
-                    <a href="https://www.youtube.com/watch?v=hh6LN8uwytE"> Youtube video</a>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/hh6LN8uwytE?si=RSF3hwzrJUbSDLOP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </section>
                 
-                <section>
+                <section class="col">
                     <h2>Feedback Form</h2>
                         <form action="feedback.php" method="post">
-                            <p>
-                                <label> *First Name: <input type="text" name="fname" placeholder="anonymous" required></label>
+                            <div class="form-floating mb-3">
+                                <input type="text" name="fname" placeholder="anonymous" required class="form-control">
+                                <label for="fName form-label"> *First Name</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input type="text" name="lname" placeholder="anonymous" required class="form-control">
+                                <label for="lName form-label"> *Last Name</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input type="email" name="mail" placeholder="xxx@domain.com" required class="form-control">
+                                <label for="email form-label"> *Email</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input type="text" name="phonenumber" placeholder="xxx-xxx-xxxx" class="form-control">
+                                <label for="pnumber form-label"> Phone number (optional)</label>
                                 <br>
-                                <label> *Last Name: <input type="text" name="lname" placeholder="anonymous" required></label>
-                                <br>
-                                <label> *Email: <input type="email" name="mail" placeholder="xxx@domain.com" required></label>
-                                <br>
-                                <label> Phone number (optional) <input type="text" name="phonenumber" placeholder="xxx-xxx-xxxx"></label>
-                                <br>
-
-                                <br>
+                            </div>
+                            <div class="form-check">
                                 Would you recommend this webite?
-                                <label> 
-                                    <input type="radio" name="choice" value="Yes">
-                                    Yes
-                                </label>
-                                <label> 
-                                    <input type="radio" name="choice" value="No">
-                                    No
-                                </label>
+                                <label for="radio form-check-input"></label>
+                                <input class="form-check-label" type="radio" name="choice" value="Yes">
+                                Yes
+                            
+                                <label for="radio form-check-input"></label>
+                                <input class="form-check-label" type="radio" name="choice" value="No">
+                                No
+                            </div>
+                            <div class="form-floating">
 
                                 <br>
                                 What is your favorite website?
-                                <select name="favwebsite" size="3" multiple>
+                                <label for="favwebsite form-label"></label>
+                                <select name="favwebsite" size="3" multiple id="favweb" class="form-select" aria-label="Floating label disabled select example">
+                                    <option selected>Choose one or more</option>
                                     <option value="g"> Google</option>
                                     <option value="d"> Discord</option>
                                     <option value="x"> Twitter</option>
@@ -45,34 +84,40 @@
                                     <option value="i"> Instagram</option>
                                     <option value="t"> TikTok</option>
                                 </select>
-                                <br>
+                                
+                            </div>
+                            <div class="form-floating mb-3">
                                 Pick your favorite color
-                                    <input type="color" name="sColor">
-                                <br>
+                                    <label for="color form-label"></label>
+                                    <input type="color" name="sColor" class="form-control">
+                            </div>
+                            <div class="form-floating mb-3">
                                 When is your birthday
-				                    <input type="date" name="checkin">
-                                <br>
+                                    <label for="date form-label"></label>
+				                    <input type="date" name="checkin" class="form-control">
+                            </div>
 
-                                <br>
+                            <div class="form-floating mb-3">
                                 Scale this website from 1-10
-                                    <input type="range" name="rate" id="rating" step="1" min="1" max="10">
-                                <br>
-                                <br>
-                                Leave any comments for me 
-                                <br>
-                                    <textarea name="comment" id="comment" cols="10" rows="10" placeholder="Enter your comments"></textarea>
+                                    <label for="range form-label"></label>
+                                    <input type="range" name="rate" id="rating" step="1" min="1" max="10" class="form-range">
+                            </div>
+                            <div class="form-floating">
 
-                                <br>
-                                <br>
+                                Leave any comments for me
+                                    <textarea class="form-control" name="comment" id="comment" cols="10" rows="10" placeholder="Enter your comments"></textarea>
+                                    <label for="comments"></label>
+                            
+                            </div>
                                 <input type="submit" value="submit">
                                 <br> 
-                            </p>
                         </form>
 
                     <br>
                     <a href="index.html"> Back </a>
                 </section>
 
-            </main>
+        </main>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
         </body>
 </html>

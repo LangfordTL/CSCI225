@@ -2,25 +2,28 @@
 <html lang="en">
     <head>
         <title>CSCI225 Course Homework Website</title>
-        <link rel="stylesheet" href="css/home.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     </head>
 
     <body>
         <!--Header-->
-        <header> 
-            <nav> Drop down menu 
+        <div class=".container">
+        <header class="row"> 
+            <nav class="col"> Drop down menu 
                 <ol>
                     <li><a href="https://www.usca.edu/">USC Aiken page</a></li>
+                    <li><a href="#intro"> Introduction</a></li>
                     <li><a href="#Assignments">Assignment Tab</a></li>
+                    <li><a href="#portfolio"> Portfolio</a></li>
                     <li><a href="#schedule">Schedule</a></li>
                 </ol>
             </nav>
         </header>
 
         <!--Main Content area-->
-        <main>
-            <section> 
-                <h2>Introduction</h2>
+        <main class="row">
+            <section class="col"> 
+                <h2 id="intro">Introduction</h2>
                 <p> 
                     My name is Logan Langford and I go to college at University of South Carolina Aiken.
                     I like to play video games on my spare time, I like to read comics about Marvel and DC
@@ -31,12 +34,12 @@
                     get my master degree.
                 </p>
 
-                <img src="https://ih1.redbubble.net/image.5775633060.4046/bg,f8f8f8-flat,750x,075,f-pad,750x1000,f8f8f8.jpg" alt="Usagi from Chiikawa">
+                
 
             </section>
 
-            <section> 
-                <h2>Portfolio</h2> 
+            <section class="col"> 
+                <h2 id="portfolio">Portfolio</h2> 
                 <ol>
                     <li>GreenHouse Gas Project
                     I made a short video for Chemistry in Society about the dangers
@@ -119,5 +122,7 @@
             <em>Copyright</em>
             &copy;
         </section>
+        </div>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     </body>
 </html>

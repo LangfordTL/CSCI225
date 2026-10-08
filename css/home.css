@@ -1,14 +1,45 @@
 :root{
     --color-font-body: rgb(255, 0, 0);
-    --img-background: ('..img/Usagimygoat.jpg');
+    --img-background: url('../img/Usagimygoat.jpg');
+    --color-background: rgb(237, 242, 142);
+}
+
+#intro{--pos-top: 120px; --pos-left: 200px;}
+#portfolio{--pos-top: 40px; --pos-left: 840px;}
+#schedule{--pos-top: 10px; --pos-left: 240px;}
+#Assignments{--pos-top: 200px; --pos-left: 240px;}
+
+h2{
+    text-transform: capitalize;
+    text-align: center;
+    display: inline-block;
+}
+
+h2+p:hover{
+    visibility: hidden;
+} 
+
+header abbr{
+    position: relative;
+    top: 10px;
+    font-size: 0.5em;
 }
 
 p {
+    position: absolute;
+    top: var(--pos-top);
+    left: var(--pos-left);
+    width: 100px;
     font-family: 'Times New Roman', Times, serif;
     line-height: 2em;
     text-align: center;
-    
+    opacity: 100;
+    transition: all 3s;
 } 
+
+p h2::first-letter{
+    font-size: 3em;
+}
 
 li{
     color: var(--color-font-body);
@@ -40,8 +71,11 @@ header{
 }
 
 footer{
-
+    background-color: var(--color-background);
+    border: 2em;
+    
 }
 
-
-
+body{
+    background-image: var(--img-background);
+}
