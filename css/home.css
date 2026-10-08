@@ -1,6 +1,6 @@
 :root{
     --color-font-body: rgb(255, 0, 0);
-    --img-background: url('../img/Usagimygoat.jpg');
+    --img-background: url('../img/1344763.jpeg');
     --color-background: rgb(237, 242, 142);
 }
 
@@ -78,4 +78,5 @@ footer{
 
 body{
     background-image: var(--img-background);
+    background-size: cover;
 }
