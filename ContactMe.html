@@ -43,30 +43,30 @@
                     <h2>Feedback Form</h2>
                         <form action="feedback.php" method="post">
                             <div class="form-floating mb-3">
-                                <input type="text" name="fname" placeholder="anonymous" required class="form-control">
+                                <input type="text" id="fname" name="fname" placeholder="anonymous" required class="form-control">
                                 <label for="fname" class="form-label"> *First Name</label>
                             </div>
                             <div class="form-floating mb-3">
-                                <input type="text" name="lname" placeholder="anonymous" required class="form-control">
+                                <input type="text" id="lname" name="lname" placeholder="anonymous" required class="form-control">
                                 <label for="lname" class="form-label"> *Last Name</label>
                             </div>
                             <div class="form-floating mb-3">
-                                <input type="email" name="mail" placeholder="xxx@domain.com" required class="form-control">
+                                <input type="email" id="mail" name="mail" placeholder="xxx@domain.com" required class="form-control">
                                 <label for="mail" class="form-label"> *Email</label>
                             </div>
                             <div class="form-floating mb-3">
-                                <input type="text" name="phonenumber" placeholder="xxx-xxx-xxxx" class="form-control">
-                                <label for="phonenumber" class="form-label"> Phone number (optional)</label>
+                                <input type="text" id="pnumber" name="phonenumber" placeholder="xxx-xxx-xxxx" class="form-control">
+                                <label for="pnumber" class="form-label"> Phone number (optional)</label>
                                 <br>
                             </div>
                             <div class="form-check">
                                 Would you recommend this webite?
                                 <label for="radio" class="form-check-input"></label>
-                                <input class="form-check-label" type="radio" name="choice" value="Yes">
+                                <input class="form-check-label" id="radio" type="radio" name="choice" value="Yes">
                                 Yes
                             
                                 <label for="radio" class="form-check-input"></label>
-                                <input class="form-check-label" type="radio" name="choice" value="No">
+                                <input class="form-check-label" id="radio" type="radio" name="choice" value="No">
                                 No
                             </div>
                             <div class="form-floating">
@@ -89,24 +89,24 @@
                             <div class="form-floating mb-3">
                                 Pick your favorite color
                                     <label for="sColor" class="form-label"></label>
-                                    <input type="color" name="sColor" class="form-control">
+                                    <input type="color" id="sColor" name="sColor" class="form-control">
                             </div>
                             <div class="form-floating mb-3">
                                 When is your birthday
                                     <label for="checkin" class="form-label"></label>
-				                    <input type="date" name="checkin" class="form-control">
+				                    <input type="date" id="checkin" name="checkin" class="form-control">
                             </div>
 
                             <div class="form-floating mb-3">
                                 Scale this website from 1-10
                                     <label for="rate" class="form-label"></label>
-                                    <input type="range" name="rate" id="rating" step="1" min="1" max="10" class="form-range">
+                                    <input type="range" id="rate" name="rate" id="rating" step="1" min="1" max="10" class="form-range">
                             </div>
                             <div class="form-floating">
 
                                 Leave any comments for me
                                     <textarea class="form-control" name="comment" id="comment" cols="10" rows="10" placeholder="Enter your comments"></textarea>
-                                    <label for="comments"></label>
+                                    <label for="comment"></label>
                             
                             </div>
                                 <input type="submit" value="submit">
