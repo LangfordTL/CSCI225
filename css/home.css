@@ -131,7 +131,6 @@ p{
     font-family: 'Times New Roman', Times, serif;
     line-height: 2.0;
     text-align: left;
-    animation: slidein 1 ease-out forwards;
 }
 
 p::first-letter{
@@ -196,8 +195,3 @@ body{
     50%{opacity: 0.5;}
     100%{transform: translateX(0); opacity: 1;}
 }
-
-@keyframes slidein {​
-  from{transform: scaleX(0);}​
-  to  {transform: scaleX(1);}​
-}​
