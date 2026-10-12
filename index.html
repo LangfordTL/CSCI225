@@ -1,66 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>CSCI225 Course Homework Website</title>
-        <link rel="stylesheet" href="css/home.css">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    </head>
 
-    <body>
-        <!--Header-->
-        <header class="row"> 
+<head>
+    <title>CSCI225 Course Homework Website</title>
+    <link rel="stylesheet" href="css/home.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<body>
+    <!--Header-->
+    <header class="row" id="menu">
         <div class="container-fluid">
             <nav class="col nav bg-dark text-white">
                 <ol class="nav">
-                    <li class="nav-iem"><a class="nav-link link-info" href="https://www.usca.edu/">USC Aiken page</a></li>
+                    <li class="nav-iem"><a class="nav-link link-info" href="https://www.usca.edu/">USC Aiken page</a>
+                    </li>
                     <li class="nav-iem"><a class="nav-link link-info" href="#intro"> Introduction</a></li>
                     <li class="nav-iem"><a class="nav-link link-info" href="#Assignments">Assignment Tab</a></li>
                     <li class="nav-iem"><a class="nav-link link-info" href="#portfolio"> Portfolio</a></li>
                     <li class="nav-iem"><a class="nav-link link-info" href="#schedule">Schedule</a></li>
+                    <li class="nav-iem"><a class="nav-link link-info" href="#Contact">Contact</a></li>
                 </ol>
             </nav>
         </div>
-        </header>
+    </header>
 
-        <!--Main Content area-->
-        <main class="col">
-            <section class="row" id="intro"> 
-                <h2>Introduction</h2>
-                <p> 
-                    My name is Logan Langford and I go to college at University of South Carolina Aiken.
-                    I like to play video games on my spare time, I like to read comics about Marvel and DC
-                    and read Dragon Ball manga. I also like to collect figurines for Dragon Ball characters
-                    because I like having some of favorite characters on my shelf. And sometimes on the weekend 
-                    I babysit my niece and nephew to spend time with them. After college I hope to graduate with a Bachelor's degree 
-                    in Applied Computer Science and get a career in that same field. Then soon after I want to go back to college and 
-                    get my master degree.
-                </p>
+    <!--Main Content area-->
+    <main class="col">
+        <section class="row" id="intro">
+            <h2>Introduction</h2>
+            <p>
+                My name is Logan Langford and I go to college at University of South Carolina Aiken.
+                I like to play video games on my spare time, I like to read comics about Marvel and DC
+                and read Dragon Ball manga. I also like to collect figurines for Dragon Ball characters
+                because I like having some of favorite characters on my shelf. And sometimes on the weekend
+                I babysit my niece and nephew to spend time with them. After college I hope to graduate with a
+                Bachelor's degree
+                in Applied Computer Science and get a career in that same field. Then soon after I want to go back to
+                college and
+                get my master degree.
+            </p>
 
-                
 
-            </section>
 
-            <section class="col"> 
-                <h2 id="portfolio">Portfolio</h2> 
-                <ol>
-                    <li>GreenHouse Gas Project
+        </section>
+
+        <section class="col" id="portfolio">
+            <h2>Portfolio</h2>
+            <ol>
+                <li>GreenHouse Gas Project
                     I made a short video for Chemistry in Society about the dangers
                     of the greenhouse gas Sulphur Hexafluoride using characters from Dragon Ball
                     and used ai to voice the characters but wrote the script myself
-                    </li>
-                    <li>Formal Paper Project
+                </li>
+                <li>Formal Paper Project
                     An essay I wrote about South Korean culture and K-Pop and
                     how fashion and collectivism are reflected in K-Pop
-                    </li>
-                    <li>Citizen Leadership Project
+                </li>
+                <li>Citizen Leadership Project
                     A small project I did where I had to volunteer for 3 hours and report it back.
-                    </li>
-                </ol>
-            </section>
+                </li>
+            </ol>
+        </section>
 
-            <section class="row"> 
-                <h2 id="schedule"> Schedule</h2> 
-                <div style="border:3px solid black; width: 50%; background-color: gray;">
+        <section class="row" id="schedule">
+            <h2>Schedule</h2>
+            <div id="schedule-info" style="background-color: gray; width: 400%;">
                 <table>
                     <tr>
                         <th>Day/Period</th>
@@ -73,14 +79,14 @@
                         <th>3:00-4:00</th>
                         <th>4:00-5:00</th>
                     </tr>
-                     <tr>
+                    <tr>
                         <td class="highlight"><b>Monday</b></td>
                         <td></td>
                         <td></td>
                         <td></td>
                         <td>CSCIA225</td>
                         <td colspan="2">CSCIA220</td>
-                        
+
                     </tr>
                     <tr>
                         <td class="highlight"><b>Tuesday</b></td>
@@ -114,49 +120,44 @@
                         <td colspan="8" class="special">NO CLASS</td>
                     </tr>
                 </table>
-                </div>
-            </section>
-        </main>
+            </div>
+        </section>
+    </main>
 
-        <!--Sidebar area-->
-        <aside>
-            <h2 id="Assignments"> Assignment</h2>
-            <nav>
-                <ol>
-                    <li><a href="https://github.com/LangfordTL/CSCI225/blob/main/doc/Assignment1.pdf">Assignment 1</a></li>
-                    <li><a href="https://github.com/LangfordTL/CSCI225/blob/main/doc/Assignment2-1.pdf">Assignment 2</a></li>
-                    <li><a href="ContactMe.html"> Contact Me Assignment</a></li>
-                </ol>
-            </nav>
-        </aside>
+    <!--Sidebar area-->
+    <aside class="col" id="Assignments">
+        <h2> Assignment</h2>
+        <nav>
+            <ol>
+                <li><a href="https://github.com/LangfordTL/CSCI225/blob/main/doc/Assignment1.pdf">Assignment 1</a></li>
+                <li><a href="https://github.com/LangfordTL/CSCI225/blob/main/doc/Assignment2-1.pdf">Assignment 2</a>
+                </li>
+                <li><a href="ContactMe.html"> Contact Me Assignment</a></li>
+            </ol>
+        </nav>
+    </aside>
 
-        <!--fotter area-- contact information copyright-->
-        <footer>
-            <p> <strong>Contact Information</strong></p>
-            <nav>
-                <a href="mailto:LangfordTLogan@gmail.com">Send email to Logan Langford</a>
-            </nav>
-            <p></p>
-            <nav>
-                <a href="https://www.instagram.com/warmbloodedk1ll_/">Follow me on Instagram</a>
-            </nav>
-            <p></p>
-            <nav>
-                <a href="https://www.tiktok.com/@warmbloodedk1ll?is_from_webapp=1&sender_device=pc">Follow me on TikTok</a>
-            </nav>
-            <p></p>
-            <nav>
-                <a href="ContactMe.html"> Contact Me</a>
-            </nav>
+    <!--footer area-- contact information copyright-->
+    <footer class="col" id="Contact">
+        <h2>Contact Information</h2>
+        <ul>
+            <li><a href="mailto:LangfordTLogan@gmail.com">Send email to Logan Langford</a></li>
+            <li><a href="https://www.instagram.com/warmbloodedk1ll_/">Follow me on Instagram</a></li>
+            <li><a href="https://www.tiktok.com/@warmbloodedk1ll?is_from_webapp=1&sender_device=pc">Follow me onTikTok</a></li>
+            <li><a href="ContactMe.html"> Contact Me</a></li>
+        </ul>
 
-        </footer>
-        <div>
+    </footer>
+    <div>
         <!--Copyright-->
-        <section>
+        <section id="copyright">
             <em>Copyright</em>
             &copy;
         </section>
-        </div>
-     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-    </body>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
 </html>
