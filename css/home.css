@@ -30,6 +30,7 @@ section{
     left: var(--pos-left);
     padding: 5px 10px 20px 5px;
     overflow-wrap: break-world;
+    animation: horizontalmove 0.8s ease-out forwards;
 }
 
 section > p,
@@ -50,6 +51,7 @@ aside{
     position: absolute;
      top: var(--pos-top);
      left: var(--pos-left);
+     animation: horizontalmove 0.8s ease-out forwards;
 }
 
 footer{
@@ -60,6 +62,8 @@ footer{
     opacity: 1;
     width: 265px;
     height: 25vh;
+    background-color: var(--color-background);
+    animation: horizontalmove 0.8s ease-out forwards;
 }
 
 footer > h2{
@@ -96,7 +100,7 @@ footer:hover > ul {
 #schedule-info {
     position: absolute;
     top: -350px;
-    left: 200px;
+    left: 170px;
     visibility: hidden;
     opacity: 0;
     transition: opacity 0.3s ease;
@@ -111,6 +115,10 @@ footer:hover > ul {
     width: 800px;
     box-sizing: border-box;
     padding: 10px;
+    border: 2px solid black;
+    border-radius: 12px;
+    vertical-align: auto;
+    empty-cells: hide;
 }
 
 #schedule h2:hover + #schedule-info
@@ -123,10 +131,12 @@ p{
     font-family: 'Times New Roman', Times, serif;
     line-height: 2.0;
     text-align: left;
+    animation: slidein 1 ease-out forwards;
 }
 
-p h2::first-letter{
-    font-size: 3em;
+p::first-letter{
+    font-size: 2em;
+    
 }
 
 ol{
@@ -134,9 +144,6 @@ ol{
     color: var(--color-font-body);
 }
 
-ul{
-    list-style-image: url(--img-background2);
-}
 
 a{
     text-decoration: none;
@@ -161,6 +168,14 @@ a:hover{
     transition: opacity 0.3s ease;
 }
 
+ol li:first-child{
+    box-shadow: -25px -25px 50px black;
+}
+
+tr:nth-child(even){
+    background-color: var(--color-background);
+}
+
 section{
     top: var(--pos-top);
     left: var(--pos-left);
@@ -175,3 +190,14 @@ body{
     background-image: var(--img-background);
     background-size: cover;
 }
+
+@keyframes horizontalmove{
+    0%{transform: translateX(-50px);}
+    50%{opacity: 0.5;}
+    100%{transform: translateX(0); opacity: 1;}
+}
+
+@keyframes slidein {​
+  from{transform: scaleX(0);}​
+  to  {transform: scaleX(1);}​
+}​
