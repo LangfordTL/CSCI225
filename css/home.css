@@ -1,12 +1,13 @@
 :root{
     --color-font-body: rgb(255, 0, 0);
     --img-background: url('../img/1344763.jpeg');
+    --img-background2: url('../img/Usagimygoat.jpg');
     --color-background: rgb(77, 83, 94);
 }
 
-#intro{--pos-top: 80px; --pos-left: 100px;}
+#intro{--pos-top: 80px; --pos-left: 100px; width: 350px; overflow-wrap: break-world;}
 #portfolio{--pos-top: 80px; --pos-left: 1200px;}
-#schedule {--pos-top: 600px; --pos-left: 250px; }
+#schedule {--pos-top: 600px; --pos-left: 250px;}
 #Assignments{--pos-top: 600px; --pos-left: 1050px;}
 #Contact{--pos-top: 600px; --pos-left: 600px;}
 #menu{--pos-top: 600px; --pos-left: 850px;}
@@ -28,6 +29,7 @@ section{
     top: var(--pos-top);
     left: var(--pos-left);
     padding: 5px 10px 20px 5px;
+    overflow-wrap: break-world;
 }
 
 section > p,
@@ -48,7 +50,6 @@ aside{
     position: absolute;
      top: var(--pos-top);
      left: var(--pos-left);
-    background-color: var(--color-background);
 }
 
 footer{
@@ -83,10 +84,8 @@ footer:hover > ul {
     top: -15px;
     opacity: 0;
     transition: opacity 0.3s ease;
-    background-color: var(--color-background);
-    width: 260px;
-    height: 18vh;
     font-size: 16px;
+    
 }
 
 #Contact > h2:hover + ul{
@@ -103,37 +102,55 @@ footer:hover > ul {
     transition: opacity 0.3s ease;
 }
 
+#schedule-info table{
+    background-image: var(--img-background2);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 800px;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
 #schedule h2:hover + #schedule-info
 {
     visibility: visible;
     opacity: 1;
 }
 
-
-
-/*header abbr{
-    position: relative;
-    top: 10px;
-    font-size: 0.5em;
-}*/
+p{
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 2.0;
+    text-align: left;
+}
 
 p h2::first-letter{
     font-size: 3em;
 }
 
+ol{
+    font-weight: 400;
+    color: var(--color-font-body);
+}
+
+ul{
+    list-style-image: url(--img-background2);
+}
 
 a{
     text-decoration: none;
     font-family: 'Times New Roman', Times, serif;
+    font-weight: 200;
     color: var(--color-font-body);
 }
 
 a:hover{
     font-family: Arial, Helvetica, sans-serif;
-    color: blue;
+    color: rgb(81, 4, 107);
 }
 
-#Assignments:hover + nav{
+#Assignments:hover nav{
     visibility: visible;
     opacity: 1;
 }
@@ -149,25 +166,12 @@ section{
     left: var(--pos-left);
 }
 
+section p:first-child{
+    text-shadow: 0.5em 0.1em;
+}
+
 
 body{
     background-image: var(--img-background);
     background-size: cover;
 }
-
-/*#schedule + div {
-    position: absolute;
-    top: 250px;
-    left: 375px;
-}
-
-div table{
-    visibility: hidden;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-div:hover table{
-    visibility: visible;
-    opacity: 1;
-}*/
