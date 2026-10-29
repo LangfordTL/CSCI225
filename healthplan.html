@@ -1,1 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title> Health Plan </title>
+    </head>
 
+    <body>
+        <main>
+            <div id="BMI">
+                <h2> Calculate BMI </h2>
+                <p> Enter your Weight, Height, and Age</p>
+                <p> <img id="bodytemplate" src="" alt=""></p>
+                <script>
+                    function BMInum(){
+                        var bmiE = document.getElementById("w");
+                        var w = parseFloat(document.getElementById("weight").value);
+                        console.log("Weight is " + w);
+
+                        var h = parseFloat(document.getElementById("height").value);
+                        console.log("Height is " + h);
+
+                        var age = parseFloat(document.getElementById("age").value);
+                        console.log("Age is " + age);
+
+                        BMI = w / (h / 100) ** 2;
+                        console.log("The BMI is " + Math.round(BMI));
+                        document.getElementById("results").textContent = "Your BMI is " + Math.round(BMI) + " and your age is " + age;
+                    }
+                </script>
+                <p>
+                    Weight: <input type="text" name="w" id="weight">kg
+                    <br>
+                    Height: <input type="text" name="h" id="height">cm
+                    <br>
+                    Age: <input type="text" name="age" id="age">years
+                    <br>
+                    <input type="button" value="=" onclick="BMInum();">
+                    <label id="results"> ___ </label>
+                </p>
+            </div>
+            <div id="BasicCalories">
+                <h2> Basic Calories </h2>
+                <p> What's your Gender?
+                    <select id="gender">
+                        <option> Men </option>
+                        <option> Women</option>
+                    </select>.</p>
+                <p>
+                    <input type="button" value="Calculate" onclick="genderCalculate();">
+                    <label id="genderResults"> </label>
+                </p>
+
+                <script>
+                    function genderCalculate (){
+                        const genderE = document.getElementById('gender');
+                        let w = parseFloat(document.getElementById("weight").value);
+                        let h = parseFloat(document.getElementById("height").value);
+                        let age = parseFloat(document.getElementById("age").value);
+                    //const BMIE = document.querySelector('.BMI'); 
+                        console.log("The user's gender is " + genderE.value);
+                        console.log("The index is " + genderE.selectionIndex);
+                        let gender = document.getElementById("gender").value;
+                        if (gender === "Men"){
+                            BC = (w * 10) + (h * 6.25) - (age * 5) + 5;
+                        }
+                        else if (gender === "Women"){
+                            BC = (w * 10) + (h * 6.25) - (age * 5) - 161;
+                        }
+                        else{
+                            BC = 0;
+                        }
+                        console.log("The basic calories is " + Math.round(BC));
+                        document.getElementById("genderResults").textContent = "Your basic calories based on your gender is " + Math.round(BC);
+                    }
+                </script>
+            </div>
+            <div id="CalorieTarget">
+                <h2> Calorie Target</h2>
+                <p>Check if you're Obese, Overweight, or Normal/Underweight</p>
+                <script>
+                    function CTCalculate() {
+                        //let BMI = parseFloat(document.getElementById("BMI")).value;
+                        //let BC = parseFloat(document.getElementById("BasicCalories")).value;
+                        let ct = 0;
+                        let weightclass = "";
+                        if (BMI >= 30) {
+                            ct = BC - 750;
+                            weightclass = "Obese";
+                        } else if (BMI >= 25.0){
+                            ct = BC - 500;
+                            weightclass = "Overweight";
+                        } else if (BMI < 25.0){
+                            ct = BC;
+                            weightclass = "Normal/Underweight";
+                        }
+                        calorieTarget = Math.round(ct);
+                        console.log("The Calorie Target is " + calorieTarget);
+                        document.getElementById("CTResults").textContent = "Based on your BMI and Basic Calories, your Calorie Target is " + calorieTarget + " calories per day. You are " + weightclass + ".";
+                    }
+                </script>
+                <p>
+                    <input type="button" value="Calculate" onclick="CTCalculate();">
+                    <label id="CTResults"> </label>
+                </p>
+            </div>
+            <div id="MealPlanner">
+                <h2> Meal Planner </h2>
+                <p> Generate your meal plan </p>
+                <script>
+                    const foodDatabase = [
+                        { name: "Apple (1 medium)", cal: 95 },
+                        { name: "Banana (1 medium)", cal: 105 },
+                        { name: "Orange (1 medium)", cal: 62 },
+                        { name: "Grapes (1 cup)", cal: 104 },
+                        { name: "Strawberries (1 cup)", cal: 49 },
+                        { name: "Broccoli (1 cup)", cal: 55 },
+                        { name: "Carrots (1 cup)", cal: 52 },
+                        { name: "Spinach (1 cup)", cal: 7 },
+                        { name: "Potato (1 medium)", cal: 161 },
+                        { name: "Sweet Potato (1 medium)", cal: 103 },
+                        { name: "Avocado (half)", cal: 117 },
+                        { name: "Chicken Breast (4oz)", cal: 165 },
+                        { name: "Salmon (4oz)", cal: 235 },
+                        { name: "Ground Beef 80/20 (4oz)", cal: 287 },
+                        { name: "Egg (1 large)", cal: 72 },
+                        { name: "Tofu (1/2 cup)", cal: 94 },
+                        { name: "Black Beans (1/2 cup)", cal: 114 },
+                        { name: "Lentils (1/2 cup)", cal: 115 },
+                        { name: "Plain Greek Yogurt (1 cup)", cal: 100 },
+                        { name: "Almonds (1 oz)", cal: 164 },
+                        { name: "Peanuts (1 oz)", cal: 161 },
+                        { name: "Peanut Butter (2 tbsp)", cal: 188 },
+                        { name: "Brown Rice (1 cup cooked)", cal: 216 },
+                        { name: "White Rice (1 cup cooked)", cal: 205 },
+                        { name: "Quinoa (1 cup cooked)", cal: 222 },
+                        { name: "Oats (1/2 cup dry)", cal: 150 },
+                        { name: "Whole Wheat Bread (1 slice)", cal: 69 },
+                        { name: "White Bread (1 slice)", cal: 75 },
+                        { name: "Pasta (1 cup cooked)", cal: 220 },
+                        { name: "Bagel (1 medium)", cal: 245 },
+                        { name: "Flour Tortilla (8 inch)", cal: 144 },
+                        { name: "Vanilla Ice Cream (1/2 cup)", cal: 137 },
+                        { name: "Chocolate Chip Cookie (1 medium)", cal: 148 },
+                        { name: "Potato Chips (1 oz)", cal: 152 },
+                        { name: "Pretzels (1 oz)", cal: 108 },
+                        { name: "Cheddar Cheese (1 oz)", cal: 113 },
+                        { name: "Butter (1 tbsp)", cal: 102 },
+                        { name: "Olive Oil (1 tbsp)", cal: 119 },
+                        { name: "Whole Milk (1 cup)", cal: 149 },
+                        { name: "Almond Milk (1 cup)", cal: 39 },
+                        { name: "Orange Juice (1 cup)", cal: 112 },
+                        { name: "Cola (12 oz)", cal: 140 },
+                        { name: "Black Coffee (8 oz)", cal: 2 },
+                        { name: "Bacon (2 slices)", cal: 86 },
+                        { name: "Pork Sausage (1 link)", cal: 133 },
+                        { name: "Pancakes (2 medium)", cal: 172 },
+                        { name: "Waffle (1 large)", cal: 218 },
+                        { name: "Honey (1 tbsp)", cal: 64 },
+                        { name: "Maple Syrup (1 tbsp)", cal: 52 },
+                        { name: "Cheese Pizza (1 slice)", cal: 285 }
+                ];
+                //shuffles up the names and calories count
+                function mealPlanGenerate(){
+                    let calorieCal = [...foodDatabase];
+                    for(let i = calorieCal.length - 1; i > 0; i--){
+                        const j = Math.floor(Math.random() * (i+1));
+                        let temp = calorieCal[i];
+                        calorieCal[i] = calorieCal[j];
+                        calorieCal[j] = temp;
+                        //[calorieCal[i], calorieCal[j]] = [calorieCal[j], calorieCal[i]];
+                    }
+
+                    let mealPlanFoods = [];
+                    let mealPlanCalories = 0;
+                    let output = "You can eat "
+
+                    for (let i = 0; i < calorieCal.length; i++){
+                        if (mealPlanCalories + calorieCal[i].cal <= calorieTarget){
+                            mealPlanFoods.push(calorieCal[i]);
+                            mealPlanCalories += calorieCal[i].cal;
+                        }
+                    }
+
+                    for (let i = 0; i < mealPlanFoods.length; i++){
+                        if (i>0){
+                            output += ", ";
+                        }
+
+                        output += mealPlanFoods[i].name;
+                    }
+
+                    output += " with your calorie target of " + mealPlanCalories + " calories, within your daily calories of " + calorieTarget + " calories";
+
+                    document.getElementById("MealPlanResults").textContent = output;
+
+                    
+                    console.log("Meal plan foods are " + mealPlanFoods + " and it contains " + mealPlanCalories);
+                    //document.getElementById(calorieCal).textContent = "Your recommended meal plan is " + calorieCal;
+
+
+                }  
+
+
+                </script>
+                <p>
+                    <input type="button" value="Generate meal plan" onclick="mealPlanGenerate();">
+                    <label id="MealPlanResults"> </label>
+                </p>
+            </div>
+        </main>
+    </body>
+</html>
