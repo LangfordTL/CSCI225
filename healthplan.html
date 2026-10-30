@@ -9,7 +9,7 @@
             <div id="BMI">
                 <h2> Calculate BMI </h2>
                 <p> Enter your Weight, Height, and Age</p>
-                <p> <img id="bodytemplate" src="" alt=""></p>
+                <p> <img id="bodytemplate" src="img/Human_body_outline.png" alt="Image of human body"></p>
                 <script>
                     function BMInum(){
                         var bmiE = document.getElementById("w");
@@ -25,12 +25,47 @@
                         BMI = w / (h / 100) ** 2;
                         console.log("The BMI is " + Math.round(BMI));
                         document.getElementById("results").textContent = "Your BMI is " + Math.round(BMI) + " and your age is " + age;
-                    }
+
+                        changePic(BMI);
+                    }  
+                    const humanPic = document.getElementById("bodytemplate"); 
+                    function changePic(BMI){
+                        let weightC = 150 + (BMI - 22) + 5;
+                        let heightC = 300;
+                    
+                        weightC = Math.max(100, Math.min(weightC, 300));
+
+                    document.querySelector('#bodytemplate').animate(
+                    [
+                        {
+                            width: humanPic.offsetWidth + 'px',
+                            height: humanPic.offsetWidth + 'px'
+                        },
+                        {
+                            width: humanPic.offsetWidth + 'px',
+                            width: humanPic.offsetWidth + 'px'
+                        }
+                    ],
+                    {
+                        duration: 10000, iteration: 1
+                    });
+                    }  
+                    /*const humanPic = document.getElementById("bodytemplate");
+                    function changePic(BMI){
+                        //const pic = document.querySelector("bodytemplate");
+                        let weightsC = BMI/22;
+                        let heightsC = height/170;
+
+                        weightsC = Math.max(0.75, Math.min(weightsC, 1.6));
+                        heightsC = Math.max(0.85, Math.min(heightsC, 1.15));
+                        humanPic.style.transform = `scale(${weightsC}, ${heightsC})`;
+                        //`scale(${widthC}, ${heightS})`
+                    }*/
                 </script>
                 <p>
-                    Weight: <input type="text" name="w" id="weight">kg
+                    Weight: <input type="text" name="weight" id="weight">kg
                     <br>
-                    Height: <input type="text" name="h" id="height">cm
+                    Height: <input type="text" name="height" id="height">cm
                     <br>
                     Age: <input type="text" name="age" id="age">years
                     <br>
@@ -167,7 +202,6 @@
                         let temp = calorieCal[i];
                         calorieCal[i] = calorieCal[j];
                         calorieCal[j] = temp;
-                        //[calorieCal[i], calorieCal[j]] = [calorieCal[j], calorieCal[i]];
                     }
 
                     let mealPlanFoods = [];
