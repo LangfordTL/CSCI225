@@ -39,28 +39,17 @@
                     [
                         {
                             width: humanPic.offsetWidth + 'px',
-                            height: humanPic.offsetWidth + 'px'
+                            height: humanPic.offsetHeight + 'px'
                         },
                         {
                             width: humanPic.offsetWidth + 'px',
-                            width: humanPic.offsetWidth + 'px'
+                            height: humanPic.offsetHeight + 'px'
                         }
                     ],
                     {
                         duration: 10000, iteration: 1
                     });
                     }  
-                    /*const humanPic = document.getElementById("bodytemplate");
-                    function changePic(BMI){
-                        //const pic = document.querySelector("bodytemplate");
-                        let weightsC = BMI/22;
-                        let heightsC = height/170;
-
-                        weightsC = Math.max(0.75, Math.min(weightsC, 1.6));
-                        heightsC = Math.max(0.85, Math.min(heightsC, 1.15));
-                        humanPic.style.transform = `scale(${weightsC}, ${heightsC})`;
-                        //`scale(${widthC}, ${heightS})`
-                    }*/
                 </script>
                 <p>
                     Weight: <input type="text" name="weight" id="weight">kg
@@ -229,9 +218,6 @@
 
                     
                     console.log("Meal plan foods are " + mealPlanFoods + " and it contains " + mealPlanCalories);
-                    //document.getElementById(calorieCal).textContent = "Your recommended meal plan is " + calorieCal;
-
-
                 }  
 
 
