@@ -42,12 +42,12 @@
                             height: humanPic.offsetHeight + 'px'
                         },
                         {
-                            width: humanPic.offsetWidth + 'px',
-                            height: humanPic.offsetHeight + 'px'
+                            width: weightC + 'px',
+                            height: heightC + 'px'
                         }
                     ],
                     {
-                        duration: 10000, iteration: 1
+                        duration: 1000, iteration: 1, fill: "forwards"
                     });
                     }  
                 </script>
@@ -80,7 +80,6 @@
                         let w = parseFloat(document.getElementById("weight").value);
                         let h = parseFloat(document.getElementById("height").value);
                         let age = parseFloat(document.getElementById("age").value);
-                    //const BMIE = document.querySelector('.BMI'); 
                         console.log("The user's gender is " + genderE.value);
                         console.log("The index is " + genderE.selectionIndex);
                         let gender = document.getElementById("gender").value;
@@ -103,8 +102,6 @@
                 <p>Check if you're Obese, Overweight, or Normal/Underweight</p>
                 <script>
                     function CTCalculate() {
-                        //let BMI = parseFloat(document.getElementById("BMI")).value;
-                        //let BC = parseFloat(document.getElementById("BasicCalories")).value;
                         let ct = 0;
                         let weightclass = "";
                         if (BMI >= 30) {
@@ -185,39 +182,33 @@
                 ];
                 //shuffles up the names and calories count
                 function mealPlanGenerate(){
-                    let calorieCal = [...foodDatabase];
-                    for(let i = calorieCal.length - 1; i > 0; i--){
-                        const j = Math.floor(Math.random() * (i+1));
-                        let temp = calorieCal[i];
-                        calorieCal[i] = calorieCal[j];
-                        calorieCal[j] = temp;
-                    }
-
-                    let mealPlanFoods = [];
+                    const mealPlan = [];
+                    let mealPlanNames = "";
                     let mealPlanCalories = 0;
-                    let output = "You can eat "
+                    const ct = calorieTarget;
 
-                    for (let i = 0; i < calorieCal.length; i++){
-                        if (mealPlanCalories + calorieCal[i].cal <= calorieTarget){
-                            mealPlanFoods.push(calorieCal[i]);
-                            mealPlanCalories += calorieCal[i].cal;
+                    for (let i = 0; i < foodDatabase.length; i++) {
+                        let food = foodDatabase[Math.floor(Math.random() * foodDatabase.length)];
+
+                        if(mealPlanCalories + food.cal <= ct) {
+                            mealPlan.push(food);
+                            mealPlanCalories += food.cal;
                         }
                     }
 
-                    for (let i = 0; i < mealPlanFoods.length; i++){
-                        if (i>0){
-                            output += ", ";
+                    for (let i = 0; i < mealPlan.length; i++) {
+                        if (i > 0) {
+                            mealPlanNames += ", ";
                         }
 
-                        output += mealPlanFoods[i].name;
+                        mealPlanNames += mealPlan[i].name;
                     }
 
-                    output += " with your calorie target of " + mealPlanCalories + " calories, within your daily calories of " + calorieTarget + " calories";
 
-                    document.getElementById("MealPlanResults").textContent = output;
-
+                    console.log("Meal plan foods are " + mealPlanNames + " based on " + ct + " calories");
+                    document.getElementById("MealPlanResults").textContent = "You can eat " + mealPlanNames + " with your calorie target of " + ct + " calories";
                     
-                    console.log("Meal plan foods are " + mealPlanFoods + " and it contains " + mealPlanCalories);
+                    
                 }  
 
 
